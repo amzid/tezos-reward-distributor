@@ -1,11 +1,9 @@
-dist: bionic
 language: python
 
 # command to install dependencies
 install:
   - pip install -r requirements.txt
-  - python3 -m pip install sphinx_rtd_theme
-  - python -m pip install sphinx_rtd_theme
+  - pip install sphinx_rtd_theme
 # Addons necessary for documentation.
 addons:
     apt:
@@ -24,4 +22,4 @@ deploy:
   keep-history: true
   on:
     branch: sphinx-doc
-  local_dir: docs/build/
+  local_dir: ./docs/build/
