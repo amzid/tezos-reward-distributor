@@ -4,6 +4,23 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install sphinx_rtd_theme
+# Addons necessary for documentation.
+addons:
+    apt:
+        packages:
+            - python3-sphinx
 # command to run tests
 before_script: export PYTHONPATH=$PYTHONPATH:$(pwd)
-script: python3 -m unittest discover -s src
+script: 
+  - python3 -m unittest discover -s src
+  - sudo sphinx-build -b html ./docs/ ./docs/build/
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: sphinx-doc
+  local_dir: docs/build/
