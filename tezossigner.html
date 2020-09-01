@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to use the Tezos Signer &mdash; Tezos Reward Distributor 6.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tezos Signer with Docker" href="tezossignerdocker.html" />
+    <link rel="prev" title="Payment Address" href="paymentaddress.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Tezos Reward Distributor
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tezos Reward Distributor:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">How to get and install Tezos Reward Distributor?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">How to configure Tezos Reward Distributor?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paymentaddress.html">Payment Address</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to use the Tezos Signer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tezossignerdocker.html">Tezos Signer with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">How to run Tezos Reward Distributor?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxservice.html">Run as Linux Service</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tezos Reward Distributor</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>How to use the Tezos Signer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tezossigner.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-use-the-tezos-signer">
+<h1>How to use the Tezos Signer<a class="headerlink" href="#how-to-use-the-tezos-signer" title="Permalink to this headline">¶</a></h1>
+<p>Tezos signer daemon can be configured to sign the
+operations with the secret key of the account.
+There are two steps, first import secret key to
+the signer, second tell the client that it can use
+particular signer to sign the operations.</p>
+<ol class="arabic simple">
+<li><p>Configure Signer</p></li>
+</ol>
+<blockquote>
+<div><p>Replace “<cite>&lt;myaddressalias&gt;</cite>” with your alias.
+Replace “edesk1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX”
+with your encryped private key. IP address and port
+selection are up to the user.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">tezos</span><span class="o">-</span><span class="n">signer</span> <span class="kn">import</span> <span class="nn">secret</span> <span class="n">key</span> <span class="o">&lt;</span><span class="n">myaddressalias</span><span class="o">&gt;</span> <span class="n">encrypted</span><span class="p">:</span><span class="n">edesk1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+<span class="o">./</span><span class="n">tezos</span><span class="o">-</span><span class="n">signer</span> <span class="n">launch</span> <span class="n">socket</span> <span class="n">signer</span> <span class="o">-</span><span class="n">a</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="o">-</span><span class="n">p</span> <span class="mi">22000</span> <span class="o">-</span><span class="n">W</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Configure Client</p></li>
+</ol>
+<blockquote>
+<div><p>Replace “<cite>&lt;myaddressalias&gt;</cite>” with your alias.
+Replace “<cite>&lt;PKH&gt;</cite>” with your public key hash.
+Use the same host port combination from the previous step.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">tezos</span><span class="o">-</span><span class="n">client</span> <span class="kn">import</span> <span class="nn">secret</span> <span class="n">key</span> <span class="o">&lt;</span><span class="n">myaddressalias</span><span class="o">&gt;</span> <span class="n">tcp</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">22000</span><span class="o">/&lt;</span><span class="n">PKH</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">f</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>When the client is required to sign an operation, the operation
+is sent to the signer. Signer generates a signature and sends
+back to the client. Normally encrypted accounts are imported
+to the signer. So, it is necessary to provide encryption password
+to the signer at launch. Note that signer generates generic
+signatures e.g. sigXXXX but not edsigXXXX.</p>
+<p>For instructions on how to configure signer on a docker image
+go to the next section.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tezossignerdocker.html" class="btn btn-neutral float-right" title="Tezos Signer with Docker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="paymentaddress.html" class="btn btn-neutral float-left" title="Payment Address" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, habanoz
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>For developers &mdash; Tezos Reward Distributor 6.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Tezos Reward Distributor
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tezos Reward Distributor:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">How to get and install Tezos Reward Distributor?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">How to configure Tezos Reward Distributor?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paymentaddress.html">Payment Address</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tezossigner.html">How to use the Tezos Signer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tezossignerdocker.html">Tezos Signer with Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run.html">How to run Tezos Reward Distributor?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linuxservice.html">Run as Linux Service</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tezos Reward Distributor</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>For developers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/contributors.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="for-developers">
+<h1>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h1>
+<p>If you are interested in improving our project, this is just great! Our community looks forward to your contribution. Please follow this process:</p>
+<ol class="arabic simple">
+<li><p>Start a bug/feature issue on GitHub about your proposed change. Continue discussion until a solution is decided.</p></li>
+<li><p>Fork the repo. Create a new branch from your fork for your contribution to make it easier to merge your changes back.</p></li>
+<li><p>Branches MUST have descriptive names that start with either the <cite>fix/</cite> or <cite>feature/</cite> prefixes. Good examples are: <cite>fix/signin-issue</cite> or <cite>feature/issue-templates</cite>.</p></li>
+<li><p>Make your changes on the branch you created in Step 2. Be sure that your code passes existing unit tests. Please add unit tests for your work if appropriate. It usually is.</p></li>
+<li><p>Push your changes to your fork/branch in GitHub. Rebase from the origin master before you create the PR. Don’t push it to your master! If you do it will make it harder to submit new changes later.</p></li>
+<li><dl class="simple">
+<dt>Submit a pull request to the TRD repository from your commit page on GitHub.</dt><dd><ol class="loweralpha simple">
+<li><p>Give a descriptive title to your PR and mark it e.g. as <cite>[WIP]</cite> if you want it to be visible but you are not finished yet or need help.</p></li>
+<li><p>Provide a description of your changes according to the PR template.</p></li>
+<li><p>Put <cite>closes #XXXX</cite> in your comment to auto-close the issue that your PR fixes (if such).</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Principles on the application evolution:</p>
+<ol class="arabic simple">
+<li><p>Discuss the solution with repository owners and other community members. Start the development after everybody agrees on a solution.</p></li>
+<li><p>Prefer the simpler solution. Try to make as fewer changes as possible.</p></li>
+<li><p>Update documentation wherever it is meaningful.</p></li>
+<li><p>Create and run unit tests for the changes. Please do not sends PRs for untested changes. Payment domain requires the utmost responsibility.</p></li>
+<li><p>Follow naming conventions.</p></li>
+<li><p>Avoid code repetition. Make use of Object Oriented design principles when possible.</p></li>
+<li><p>More configuration parameters do not always mean more flexibility. We do not want the application to turn into configuration hell which nobody can use.</p></li>
+<li><p>The idea of community members is very important because this repo is just a sequence of statements if nobody uses and benefit.</p></li>
+<li><p>A change will be accepted if it will benefit the community. Particular requests which only very few people will take advantage will not be accepted to leave the code as simple as possible.</p></li>
+</ol>
+<p>Disclaimer: This project started in the spirit of free and open source software with voluntary contributions without compensation.
+You can always donate your contribution free of charge!</p>
+<p>Guidelines for rewarding PRs in the context of the TRD grant:</p>
+<ol class="arabic simple">
+<li><p>Payments are not granted for contributions being paid in the context of another grant or company income.</p></li>
+<li><p>The contributor should respect the process preceding a PR (start an issue and create a branch) and submit a PR in accordance with the PR template.</p></li>
+<li><p>The PR can only be merged if approved by at least one maintainer. Before approving a PR, the issue should be fully solved and the changes should be tested and documented.</p></li>
+<li><p>The PR can only be approved if an agreement about the work effort (in hrs) is made.</p></li>
+<li><p>The PR should be merged using a squash merge, the work effort of the contributor and reviewer should be documented in the squash merge commit message.</p></li>
+<li><p>The work efforts are paid out in a regular basis. The payments are documented in a dedicated file named <cite>contributor_payments.csv</cite>.</p></li>
+<li><p>For each payment, the reason for payment should be documented (commit hash, review efforts, etc.). Additionally, the paid amount in USD, the VWAP XTZ-USD on the payment day, the payed amount in XTZ and the transaction hash are documented.</p></li>
+</ol>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, habanoz
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
